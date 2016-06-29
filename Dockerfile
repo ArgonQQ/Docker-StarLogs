@@ -17,7 +17,7 @@ RUN \
             node-static \
             pogo
 
-
+EXPOSE 8080
 COPY start.sh /StarLogs/start.sh
 RUN chmod 755 /StarLogs/start.sh
 WORKDIR /StarLogs/
