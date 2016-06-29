@@ -8,9 +8,7 @@ RUN \
             git \
             ruby &&\
   rm -rf /var/lib/apt/lists/* && \
-  git clone git://github.com/artemave/StarLogs.git
-
-RUN \
+  git clone git://github.com/artemave/StarLogs.git && \
   cd /StarLogs/ && \
   gem install sass && \
   npm install -g \
@@ -19,6 +17,6 @@ RUN \
 
 EXPOSE 8080
 COPY start.sh /StarLogs/start.sh
-RUN chmod 755 /StarLogs/start.sh
+RUN chmod 774 /StarLogs/start.sh
 WORKDIR /StarLogs/
 CMD ["/StarLogs/start.sh"]
