@@ -12,10 +12,10 @@ RUN \
 
 RUN \
   cd /StarLogs/ && \
-  gem install sass
+  gem install sass && \
   npm install -g \
             node-static \
-            pogo && \
+            pogo
 
 
 COPY start.sh /StarLogs/start.sh
